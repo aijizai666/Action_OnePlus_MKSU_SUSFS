@@ -263,7 +263,12 @@ jobs:
           echo "CONFIG_DM_THIN_PROVISIONING=y" >> "$CONFIG_FILE"
           echo "CONFIG_NET_IPIP=y" >> "$CONFIG_FILE"
           echo "CONFIG_BINFMT_MISC=y" >> "$CONFIG_FILE"
-
+          echo "CONFIG_CGROUP_HUGETLB=y" >> "$CONFIG_FILE"
+          echo "CONFIG_CGROUP_PERF=y" >> "$CONFIG_FILE"
+          echo "CONFIG_CFS_BANDWIDTH=y" >> "$CONFIG_FILE"
+          echo "CONFIG_DEVPTS_MULTIPLE_INSTANCES=y" >> "$CONFIG_FILE"
+          echo "CONFIG_NF_CONNTRACK_BRIDGE=y" >> "$CONFIG_FILE"
+          echo "CONFIG_BPF_KPROBE_OVERRIDE=y" >> "$CONFIG_FILE"
           # SukiSU Ultra config
           echo "CONFIG_KSU=y" >> "$CONFIG_FILE"
           echo "CONFIG_KPM=y" >> "$CONFIG_FILE"
