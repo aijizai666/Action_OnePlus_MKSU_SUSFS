@@ -199,6 +199,13 @@ jobs:
 
           sed -i 's/check_defconfig//' ./common/build.config.gki
 
+      # ==================== 👇 新增步骤开始 ====================
+      - name: Prepare build directories
+        run: |
+          mkdir -p kernel_workspace/out/target/product/${{ github.event.inputs.CPUD }}
+          mkdir -p kernel_workspace/device/qcom/${{ github.event.inputs.CPUD }}-kernel
+      # ==================== 👆 新增步骤结束 ====================
+
       - name: Build kernel
         run: |
           cd kernel_workspace
