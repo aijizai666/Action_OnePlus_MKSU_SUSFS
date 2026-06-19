@@ -16,12 +16,14 @@ on:
           - sm8650
           - sm8750
           - sm8850
+          - sm8735
       FEIL:
         type: choice
         description: "配置文件"
         required: true
         default: oneplus_ace2_pro_v
         options:
+          - oneplus_turbo_6
           - oneplus_nord_ce4_v
           - oneplus_ace_3v_v
           - oneplus_nord_4_v
