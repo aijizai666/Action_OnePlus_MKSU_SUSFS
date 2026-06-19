@@ -242,8 +242,32 @@ jobs:
 
           # SukiSU Ultra config
           echo "CONFIG_KSU=y" >> "$CONFIG_FILE"
-          echo "CONFIG_KPM=y" >> "$CONFIG_FILE"
+          # Docker/容器支持
+          echo "CONFIG_PID_NS=y" >> "$CONFIG_FILE"
+          echo "CONFIG_IPC_NS=y" >> "$CONFIG_FILE"
+          echo "CONFIG_USER_NS=y" >> "$CONFIG_FILE"
+          echo "CONFIG_CGROUP_DEVICE=y" >> "$CONFIG_FILE"
+          echo "CONFIG_CGROUP_PIDS=y" >> "$CONFIG_FILE"
+          echo "CONFIG_VETH=y" >> "$CONFIG_FILE"
+          echo "CONFIG_BRIDGE=y" >> "$CONFIG_FILE"
+          echo "CONFIG_OVERLAY_FS=y" >> "$CONFIG_FILE"
+          echo "CONFIG_BPF_SYSCALL=y" >> "$CONFIG_FILE"
+          echo "CONFIG_BPF_JIT=y" >> "$CONFIG_FILE"
+          echo "CONFIG_BPF_JIT_ALWAYS_ON=y" >> "$CONFIG_FILE"
+          echo "CONFIG_CGROUP_BPF=y" >> "$CONFIG_FILE"
+          echo "CONFIG_VXLAN=y" >> "$CONFIG_FILE"
+          echo "CONFIG_MACVLAN=y" >> "$CONFIG_FILE"
+          echo "CONFIG_IPVLAN=y" >> "$CONFIG_FILE"
+          echo "CONFIG_BRIDGE_NETFILTER=y" >> "$CONFIG_FILE"
+          echo "CONFIG_IP_VS=y" >> "$CONFIG_FILE"
+          echo "CONFIG_DM_THIN_PROVISIONING=y" >> "$CONFIG_FILE"
+          echo "CONFIG_NET_IPIP=y" >> "$CONFIG_FILE"
+          echo "CONFIG_BINFMT_MISC=y" >> "$CONFIG_FILE"
 
+          # SukiSU Ultra config
+          echo "CONFIG_KSU=y" >> "$CONFIG_FILE"
+          echo "CONFIG_KPM=y" >> "$CONFIG_FILE"
+          
           # SUSFS config
           echo "CONFIG_KSU_SUSFS=y" >> "$CONFIG_FILE"
           echo "CONFIG_KSU_SUSFS_HAS_MAGIC_MOUNT=y" >> "$CONFIG_FILE"
